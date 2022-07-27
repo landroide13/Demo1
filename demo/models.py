@@ -17,6 +17,9 @@ class Book(models.Model):
     published = models.DateField(blank=True, null=True, default=None)
     cover = models.ImageField(upload_to='covers/', blank=True)
 
+    def __str__(self):
+        return self.title
+
 
 
 
